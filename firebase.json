@@ -1,0 +1,11 @@
+{
+  "hosting": {
+    "site": "vondera-landinge",
+    "public": "./",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
