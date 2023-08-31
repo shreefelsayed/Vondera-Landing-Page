@@ -1,0 +1,126 @@
+body {
+    font-family: body !important;
+    background: linear-gradient(#201238, #4b2a85);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: white;
+}
+
+.container222 {
+    background: linear-gradient(#201238, #4b2a85);
+    margin: 0 auto;
+}
+
+
+
+#wrapper {
+    padding: 15px;
+    position: relative;
+}
+
+#header {
+    background: #201238;
+    display: flex;
+    margin: 0 auto;
+    padding: 10px 0;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    box-shadow: 0 4px 17px 0 black;
+    position: relative;
+    z-index: 20;
+
+
+    .logo {
+        width: 40px;
+        height: 40px;
+        display: inline-block;
+        background: white;
+        border-radius: 50%;
+    }
+}
+
+.arrow-bottom {
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 20px solid #4b2a85;
+    position: absolute;
+    z-index: 1;
+}
+
+.left {
+    left: 15px;
+}
+
+.right {
+    right: 15px;
+}
+
+
+
+
+
+#content {
+    padding: 50px 60px;
+    border: 1px solid #ddd;
+    margin: 0 15px;
+    position: relative;
+    z-index: 10;
+    background: white;
+    box-shadow: 3px 0 15px -4px #4b2a85, -3px 0 8px -4px #4b2a85;
+
+    .top {
+        text-align: center;
+        margin-bottom: 30px;
+
+        .title,
+        .subtitle {
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        .title {
+            font-size: 25px;
+            margin-bottom: 25px;
+        }
+
+        .subtitle {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+    }
+
+    .body {
+        p.article {
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        h3 {
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+    }
+}
+
+#footer {
+    background: #201238;
+    text-align: center;
+    margin: 0 15px;
+
+    p {
+        padding: 20px;
+        color: white;
+        font-size: 23px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    #content {
+        padding: 50px 20px;
+
+    }
+
+}
