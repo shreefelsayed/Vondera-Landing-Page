@@ -29,19 +29,26 @@
                     </div>
                     <ul class="nav-list">
                         <li>
-                            <a href="#home">Home</a>
+                            <a data-il8n="home" href="#home">Home</a>
                         </li>
                         <li>
-                            <a href="#about">About</a>
+                            <a data-il8n="about" href="#about">About</a>
                         <li>
-                            <a href="#pricing">Pricing</a>
+                            <a data-il8n="pricing" href="#pricing">Pricing</a>
                         </li>
                         <li>
-                            <a href="#contact">Contact</a>
+                            <a data-il8n="contact" href="#contact">Contact</a>
                         </li>
+                        <select id="lang_select" class="mt-2">
+                            <option value="en" selected data-il8n="english">English </option>
+                            <option value="ar" data-il8n="arabic">Arabic</option>
+                        </select>
+
+                        
                     </ul>
                     <div class="buttons">
-                        <a href="#" class="button_app" id="getLink" style="text-decoration: none;" target="_blank">Get App</a>
+                        <a href="#" class="button_app" id="getLink" style="text-decoration: none;" target="_blank"
+                            data-il8n="app_download">Get App</a>
                     </div>
                 </div>
             </nav>
@@ -56,17 +63,21 @@
     <section class="home" id="home">
         <div class="container py-8">
             <div class="row">
-                <div class="col-4">
+                <div class="col-4" id="phone_mockup">
                     <img class="mockup" src="UiUX/iPhone 13 Pro Mockup Right View.png">
                 </div>
                 <div class="col-8">
-                    <h1 class="font-weight-bold title text-center text-white">Control Your Bussiness <br> With <span
-                            class="logo_font">Vondera</span> </h1>
-                    <h1 class="font-weight-bold title-2  text-center text-white">Download it now <br> and join 1000+
-                        Bussiness </h1>
+                    <h1 class="font-weight-bold title text-center text-white"><span data-il8n="home_head">Control Your
+                            Bussiness</span> <br> <span data-il8n="home_head_with">With</span> <span class="logo_font"
+                            data-il8n="vondera">Vondera</span> </h1>
+                    <h1 class="font-weight-bold title-2  text-center text-white"><span
+                            data-il8n="home_download">Download it now </span><span data-il8n="home_join">and join 1000+
+                            Bussiness</span> </h1>
                     <div class="download_apps">
-                        <button><i class="fa-brands fa-apple fa-fade pad-right"></i>App Store</button>
-                        <button onclick="openLinkInNewWindowplaystore(' https://play.google.com/store/apps/details?id=com.armjld.brands ')"><i class="fa-brands fa-google-play fa-fade pad-right"></i>Google Play</button>
+                        <button id="app_store_home"     onclick="openLinkInNewWindowplaystore('https://testflight.apple.com/join/OrIKxxTN')"><i class="fa-brands fa-apple fa-fade pad-right"></i><span data-il8n="app_Store">App Store</span></button>
+                        <button id="google_play_Store"
+                            onclick="openLinkInNewWindowplaystore(' https://play.google.com/store/apps/details?id=com.armjld.brands ')"><i
+                                class="fa-brands fa-google-play fa-fade pad-right"></i><span data-il8n="google_play">Google Play</span></button>
                     </div>
                 </div>
             </div>
@@ -79,10 +90,10 @@
                 <div class="content-column col-lg-6 col-md-12 col-sm-12 order-2">
                     <div class="inner-column">
                         <div class="sec-title">
-                            <span class="title2">About <span class="logo_font">Vondera</span> </span>
-                            <h2>We are Creative Tech App That mange your Bussiness</h2>
+                            <span class="title2"> <span data-il8n="about_about">About</span>  <span class="logo_font" data-il8n="vondera">Vondera</span> </span>
+                            <h2 data-il8n="about_brief">We are Creative Tech App That mange your Bussiness</h2>
                         </div>
-                        <div class="text"> <span class="logo_font">Vondera</span> is a comprehensive mobile app
+                        <div class="text"> <span class="logo_font" data-il8n="vondera">Vondera</span> <span data-il8n="about_desc">a comprehensive mobile app
                             available on App Store and Play Store, designed
                             to streamline e-commerce store management.
                             It empowers store owners with features like
@@ -90,14 +101,14 @@
                             analytics. With collaborative tools, order and
                             shipping updates, and expense tracking,
                             Vondera simplifies operations and facilitates
-                            accurate net profit calculations.</div>
-                        <div class="text">
+                            accurate net profit calculations. </span> </div>
+                        <div class="text" data-il8n="about_desc2">
                             You can easily create your own store by download our app
                             from google play, or app store.
                             Or you can contact us to help creating your store.
                         </div>
                         <div class="btn-box">
-                            <a href="#contact" class="theme-btn btn-style-one">Contact Us</a>
+                            <a href="#contact" class="theme-btn btn-style-one" data-il8n="contact">Contact Us</a>
                         </div>
                     </div>
                 </div>
@@ -282,61 +293,66 @@
             <div class="arrow right">&gt;</div>
         </div>
     </section>
-    <section ><
-    <div class="landing_page" id="contact">
-        <div class="responsive-container-block big-container">
+    <section>
+        < <div class="landing_page" id="contact">
+            <div class="responsive-container-block big-container">
 
-          <div class="responsive-container-block container">
-            <div class="responsive-cell-block wk-desk-6 wk-ipadp-6 wk-tab-12 wk-mobile-12 left-one">
-              <div class="content-box">
-                <p class="text-blk section-head">
-                  Cotact us
-                </p>
-                <p class="text-blk section-subhead">
-                  If you have any problem with download the app , or if you need any support or tutorial 
-                </p>
-              </div>
-            </div>
-            <div class="responsive-cell-block wk-ipadp-6 wk-tab-12 wk-mobile-12 wk-desk-6 right-one" id="i1zj">
-              <form class="form-box">
-                <div class="container-block form-wrapper">
-                  <p class="text-blk contactus-head">
-                    <a class="link" href="">
-                    </a>
-                    Get a quote
-                  </p>
-                  <p class="text-blk contactus-subhead">
-                    We will get back to you in 24 hours
-                  </p>
-                  <div class="responsive-container-block">
-                    <div class="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-12 wk-ipadp-12" id="i10mt-7">
-                      <input class="input" id="ijowk-7" name="FirstName" placeholder="First Name">
+                <div class="responsive-container-block container">
+                    <div class="responsive-cell-block wk-desk-6 wk-ipadp-6 wk-tab-12 wk-mobile-12 left-one">
+                        <div class="content-box">
+                            <p class="text-blk section-head">
+                                Cotact us
+                            </p>
+                            <p class="text-blk section-subhead">
+                                If you have any problem with download the app , or if you need any support or tutorial
+                            </p>
+                        </div>
                     </div>
-                    <div class="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-12 wk-ipadp-12" id="i1ro7">
-                      <input class="input" id="indfi-5" name="Last Name" placeholder="Last Name">
+                    <div class="responsive-cell-block wk-ipadp-6 wk-tab-12 wk-mobile-12 wk-desk-6 right-one" id="i1zj">
+                        <form class="form-box">
+                            <div class="container-block form-wrapper">
+                                <p class="text-blk contactus-head">
+                                    <a class="link" href="">
+                                    </a>
+                                    Get a quote
+                                </p>
+                                <p class="text-blk contactus-subhead">
+                                    We will get back to you in 24 hours
+                                </p>
+                                <div class="responsive-container-block">
+                                    <div class="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-12 wk-ipadp-12"
+                                        id="i10mt-7">
+                                        <input class="input" id="ijowk-7" name="FirstName" placeholder="First Name">
+                                    </div>
+                                    <div class="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-12 wk-ipadp-12"
+                                        id="i1ro7">
+                                        <input class="input" id="indfi-5" name="Last Name" placeholder="Last Name">
+                                    </div>
+                                    <div class="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-6 wk-ipadp-6 emial"
+                                        id="ityct">
+                                        <input class="input" id="ipmgh-7" name="Email" placeholder="Email">
+                                    </div>
+                                    <div class="responsive-cell-block wk-desk-6 wk-ipadp-6 wk-tab-12 wk-mobile-12">
+                                        <input class="input" id="imgis-6" name="PhoneNumber" placeholder="Phone Number">
+                                    </div>
+                                    <div class="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-12 wk-ipadp-12"
+                                        id="i634i-7">
+                                        <textarea aria-placeholder="Type message here" class="textinput" id="i5vyy-7"
+                                            placeholder="Type message here"></textarea>
+                                    </div>
+                                </div>
+                                <button class="submit-btn">
+                                    Get quote
+                                </button>
+                            </div>
+                        </form>
                     </div>
-                    <div class="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-6 wk-ipadp-6 emial" id="ityct">
-                      <input class="input" id="ipmgh-7" name="Email" placeholder="Email">
-                    </div>
-                    <div class="responsive-cell-block wk-desk-6 wk-ipadp-6 wk-tab-12 wk-mobile-12">
-                      <input class="input" id="imgis-6" name="PhoneNumber" placeholder="Phone Number">
-                    </div>
-                    <div class="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-12 wk-ipadp-12" id="i634i-7">
-                      <textarea aria-placeholder="Type message here" class="textinput" id="i5vyy-7" placeholder="Type message here"></textarea>
-                    </div>
-                  </div>
-                  <button class="submit-btn">
-                    Get quote
-                  </button>
                 </div>
-              </form>
             </div>
-          </div>
-        </div>
-      </div> 
+            </div>
     </section>
 
-    
+
     <footer class="kilimanjaro_area">
         <!-- Top Footer Area Start -->
         <div class="foo_top_header_one section_padding_100_70">
@@ -355,17 +371,23 @@
                         <div class="kilimanjaro_part m-top-15">
                             <h5>Social Links</h5>
                             <ul class="kilimanjaro_social_links">
-                                <li><a href="https://www.facebook.com/vondera.eg" target="_blank"><i class="fa-brands fa-facebook fa-fade color1"></i> Facebook</a>
+                                <li><a href="https://www.facebook.com/vondera.eg" target="_blank"><i
+                                            class="fa-brands fa-facebook fa-fade color1"></i> Facebook</a>
                                 </li>
-                                <li><a href="https://www.instagram.com/vondera.eg/" target="_blank"><i class="fa-brands fa-instagram fa-fade color1"></i> Instagram</a>
+                                <li><a href="https://www.instagram.com/vondera.eg/" target="_blank"><i
+                                            class="fa-brands fa-instagram fa-fade color1"></i> Instagram</a>
                                 </li>
-                                <li><a href="https://www.youtube.com/@vondera" target="_blank"><i class="fa-brands fa-youtube fa-fade color1"></i> YouTube</a>
+                                <li><a href="https://www.youtube.com/@vondera" target="_blank"><i
+                                            class="fa-brands fa-youtube fa-fade color1"></i> YouTube</a>
                                 </li>
-                                <li><a href="https://www.linkedin.com/company/vondera/"><i class="fa-brands fa-linkedin fa-fade color1"></i> Linkedin</a>
+                                <li><a href="https://www.linkedin.com/company/vondera/"><i
+                                            class="fa-brands fa-linkedin fa-fade color1"></i> Linkedin</a>
                                 </li>
-                                <li><a href="https://chat.whatsapp.com/ImncDzLi36xKNBA4Giunqg" target="_blank"><i class="fa-brands fa-whatsapp fa-fade color1"></i> whatspp group</a>
+                                <li><a href="https://chat.whatsapp.com/ImncDzLi36xKNBA4Giunqg" target="_blank"><i
+                                            class="fa-brands fa-whatsapp fa-fade color1"></i> whatspp group</a>
                                 </li>
-                                <li><a href="https://discord.gg/VB7y322x3h" target="_blank"><i class="fa-brands fa-discord fa-fade color1"></i> Discord</a>
+                                <li><a href="https://discord.gg/VB7y322x3h" target="_blank"><i
+                                            class="fa-brands fa-discord fa-fade color1"></i> Discord</a>
                                 </li>
                             </ul>
                         </div>
@@ -387,8 +409,10 @@
                         <div class="kilimanjaro_part">
                             <h5>Download The App</h5>
                             <div class="footer_button">
-                                <button  ><i class="fa-brands fa-apple fa-fade pad-right"></i>App Store</button>
-                                <button onclick="openLinkInNewWindowplaystore(' https://play.google.com/store/apps/details?id=com.armjld.brands ')"><i class="fa-brands fa-google-play fa-fade pad-right"></i>Google Play</button>
+                                <button><i class="fa-brands fa-apple fa-fade pad-right"></i>App Store</button>
+                                <button
+                                    onclick="openLinkInNewWindowplaystore(' https://play.google.com/store/apps/details?id=com.armjld.brands ')"><i
+                                        class="fa-brands fa-google-play fa-fade pad-right"></i>Google Play</button>
                             </div>
 
                         </div>
@@ -430,17 +454,18 @@
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script src="js/script.js" type="module"></script>
     <script src="js/navbar.js" type="module"></script>
+    <script src="js/translation.js" type="module"></script>
     <script>
         // Add event listener to the button
-        document.getElementById("getLink").addEventListener("click", function() {
+        document.getElementById("getLink").addEventListener("click", function () {
             var userAgent = navigator.userAgent || navigator.vendor || window.opera;
             var isIOS = /iPad|iPhone|iPod/.test(userAgent) && !window.MSStream;
             var isAndroid = /android/i.test(userAgent);
-    
+
             // Replace these links with the actual Google Play and App Store links
             var googlePlayLink = "https://play.google.com/store/apps/details?id=com.armjld.brands";
-            var appStoreLink = "https://apps.apple.com/";
-    
+            var appStoreLink = "https://testflight.apple.com/join/OrIKxxTN";
+
             if (isIOS) {
                 window.location.href = appStoreLink;
             } else if (isAndroid) {
