@@ -17,14 +17,45 @@
 </head>
 
 <body>
+
+    <!-- Messenger Chat Plugin Code -->
+    <div id="fb-root"></div>
+
+    <!-- Your Chat Plugin code -->
+    <div id="fb-customer-chat" class="fb-customerchat">
+    </div>
+
+    <script>
+      var chatbox = document.getElementById('fb-customer-chat');
+      chatbox.setAttribute("page_id", "110872971972664");
+      chatbox.setAttribute("attribution", "biz_inbox");
+    </script>
+
+    <!-- Your SDK code -->
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          xfbml            : true,
+          version          : 'v17.0'
+        });
+      };
+
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
     <!--- NavBar --->
     <section class="navigation">
         <div class="nav-container">
 
-            <nav>
-                <div class="nav-mobile"><a id="navbar-toggle" href="#!"><span></span></a></div>
+            <nav id="nav_cont">
+                <div class="nav-mobile" id="mob_nav"><a id="navbar-toggle" href="#!"><span></span></a></div>
                 <div class="flex">
-                    <div class="brand">
+                    <div class="brand" id="logo_nav">
                         <a href="index.html" class="logo_font">Vondera</a>
                     </div>
                     <ul class="nav-list">
@@ -44,7 +75,7 @@
                             <option value="ar" data-il8n="arabic">Arabic</option>
                         </select>
 
-                        
+
                     </ul>
                     <div class="buttons">
                         <a href="#" class="button_app" id="getLink" style="text-decoration: none;" target="_blank"
@@ -74,10 +105,14 @@
                             data-il8n="home_download">Download it now </span><span data-il8n="home_join">and join 1000+
                             Bussiness</span> </h1>
                     <div class="download_apps">
-                        <button id="app_store_home"     onclick="openLinkInNewWindowplaystore('https://testflight.apple.com/join/OrIKxxTN')"><i class="fa-brands fa-apple fa-fade pad-right"></i><span data-il8n="app_Store">App Store</span></button>
+                        <button id="app_store_home"
+                            onclick="openLinkInNewWindowplaystore('https://testflight.apple.com/join/OrIKxxTN')"><i
+                                class="fa-brands fa-apple fa-fade pad-right"></i><span data-il8n="app_Store">App
+                                Store</span></button>
                         <button id="google_play_Store"
-                            onclick="openLinkInNewWindowplaystore(' https://play.google.com/store/apps/details?id=com.armjld.brands ')"><i
-                                class="fa-brands fa-google-play fa-fade pad-right"></i><span data-il8n="google_play">Google Play</span></button>
+                            onclick="downloadApk()"><i
+                                class="fa-brands fa-google-play fa-fade pad-right"></i><span
+                                data-il8n="google_play">Google Play</span></button>
                     </div>
                 </div>
             </div>
@@ -90,18 +125,20 @@
                 <div class="content-column col-lg-6 col-md-12 col-sm-12 order-2">
                     <div class="inner-column">
                         <div class="sec-title">
-                            <span class="title2"> <span data-il8n="about_about">About</span>  <span class="logo_font" data-il8n="vondera">Vondera</span> </span>
+                            <span class="title2"> <span data-il8n="about_about">About</span> <span class="logo_font"
+                                    data-il8n="vondera">Vondera</span> </span>
                             <h2 data-il8n="about_brief">We are Creative Tech App That mange your Bussiness</h2>
                         </div>
-                        <div class="text"> <span class="logo_font" data-il8n="vondera">Vondera</span> <span data-il8n="about_desc">a comprehensive mobile app
-                            available on App Store and Play Store, designed
-                            to streamline e-commerce store management.
-                            It empowers store owners with features like
-                            stock tracking, order receipt printing, and sales
-                            analytics. With collaborative tools, order and
-                            shipping updates, and expense tracking,
-                            Vondera simplifies operations and facilitates
-                            accurate net profit calculations. </span> </div>
+                        <div class="text"> <span class="logo_font" data-il8n="vondera">Vondera</span> <span
+                                data-il8n="about_desc">a comprehensive mobile app
+                                available on App Store and Play Store, designed
+                                to streamline e-commerce store management.
+                                It empowers store owners with features like
+                                stock tracking, order receipt printing, and sales
+                                analytics. With collaborative tools, order and
+                                shipping updates, and expense tracking,
+                                Vondera simplifies operations and facilitates
+                                accurate net profit calculations. </span> </div>
                         <div class="text" data-il8n="about_desc2">
                             You can easily create your own store by download our app
                             from google play, or app store.
@@ -126,10 +163,11 @@
             </div>
             <div class="row py-8">
                 <div class="sec-title">
-                    <span class="title2">Future Global Expansion: Taking Vondera Beyond Borders</span>
-                    <h2> We will foster a vibrant and engaged global user community</h2>
+                    <span class="title2" data-il8n="about_future">Future Global Expansion: Taking Vondera Beyond
+                        Borders</span>
+                    <h2 data-il8n="about_future_sub"> We will foster a vibrant and engaged global user community</h2>
                 </div>
-                <div class="text">
+                <div class="text" data-il8n="about_future_sub2">
                     At Vondera, we are excited about the future and our mission to transform businesses worldwide. We
                     believe that through strategic planning, customer-centricity, and unwavering dedication, we can
                     bring Vondera to every corner of the globe, empowering businesses and helping them thrive in the
@@ -143,36 +181,43 @@
     <section class="pricing" id="pricing">
         <div class="content" id="pricing-slides">
             <div class="free box">
-                <h2 class="title3">Free</h2>
+                <h2 class="title3" data-il8n="free">Free</h2>
                 <div class="view">
                     <div class="icon">
                         <i class="fa-solid fa-dollar-sign free_icon1"></i>
                     </div>
                     <div class="cost">
-                        <p class="amount">Free</p>
-                        <p class="detail">per month</p>
+                        <p class="amount" data-il8n="free">Free</p>
+                        <p class="detail" data-il8n="per_month">per month</p>
                     </div>
                 </div>
                 <div class="description">
                     <ul>
-                        <li><i class="fa-solid fa-cube fa-fade color1"></i> add <span class="underline"> 15
-                            </span>Order Monthly</li>
-                        <li><i class="fa-solid fa-check fa-fade color1"></i> Add Unlimted Products And Categories</li>
-                        <li><i class="fa-solid fa-people-group fa-fade color1"></i> Add <span class="underline"> 3
-                            </span> other Employess </li>
-                        <li><i class="fa-solid fa-check fa-fade color1"></i> Print Qr Coder receipt for your orders</li>
-                        <li><i class="fa-solid fa-check fa-fade color1"></i> Sales report and net profit</li>
-                        <li><i class="fa-solid fa-x fa-fade color1"></i> Print custom message on the receipts</li>
-                        <li style="text-align-last: left;"> <i class="fa-solid fa-x fa-fade color1"></i> Access
-                            Your Client data export them and view it</li>
-                        <li style="text-align-last: left;"><i class="fa-solid fa-x fa-fade color1"></i> Add your
-                            Expanses for more accurate net profit</li>
-                        <li style="text-align-last: left;"><i class="fa-solid fa-x fa-fade color1"></i> Support having
-                            your own e-commerce website</li>
-                        <li style="text-align-last: left;"><i class="fa-solid fa-x fa-fade color1"></i> export your
-                            stock reports data , and warehouse items cost</li>
-                        <li style="text-align-last: left;"><i class="fa-solid fa-x fa-fade color1"></i> Access the
-                            Shopify API and Maytapi Api and Webhooks</li>
+                        <li><i class="fa-solid fa-cube fa-fade color1"></i> <span data-il8n="add">add</span> <span
+                                class="underline"> 15 </span> <span data-il8n="orderMonthly">Order Monthly</span></li>
+                        <li><i class="fa-solid fa-check fa-fade color1"></i> <span data-il8n="addUnlimited">Add Unlimted
+                                Products And Categories</span></li>
+                        <li><i class="fa-solid fa-people-group fa-fade color1"></i> <span data-il8n="add">Add</span>
+                            <span class="underline"> 3 </span> <span data-il8n="otherEmployees">other Employees</span>
+                        </li>
+                        <li><i class="fa-solid fa-check fa-fade color1"></i> <span data-il8n="print">Print Qr Code
+                                Receipt for your orders</span></li>
+                        <li><i class="fa-solid fa-check fa-fade color1"></i> <span data-il8n="salesReport">Sales report
+                                and net profit</span></li>
+                        <li><i class="fa-solid fa-x fa-fade color1"></i> <span data-il8n="print2">Print custom message
+                                on
+                                the receipts</span></li>
+                        <li><i class="fa-solid fa-x fa-fade color1"></i> <span data-il8n="access">Access Your Client
+                                data export them and view it</span></li>
+                        <li><i class="fa-solid fa-x fa-fade color1"></i> <span data-il8n="expenses">Add your Expenses
+                                for more accurate
+                                net profit</span></li>
+                        <li><i class="fa-solid fa-x fa-fade color1"></i> <span data-il8n="support">Support having your
+                                own e-commerce website</span></li>
+                        <li><i class="fa-solid fa-x fa-fade color1"></i> <span data-il8n="export">Export your stock
+                                reports data, and warehouse items cost</span></li>
+                        <li><i class="fa-solid fa-x fa-fade color1"></i> <span data-il8n="shopify">Access the Shopify
+                                API and Maytapi Api and Webhooks</span></li>
                     </ul>
                 </div>
 
@@ -180,108 +225,123 @@
 
 
             <div class="basic box">
-                <h2 class="title3">Standard</h2>
+                <h2 class="title3" data-il8n="standard">Standard</h2>
                 <div class="view">
                     <div class="icon">
                         <i class="fa-brands fa-fly fa-fade package_icon1"></i>
                     </div>
                     <div class="cost">
-                        <p class="amount">150 Egp</p>
-                        <p class="detail">per month</p>
+                        <p class="amount">149 <span data-il8n="egp">Egp</span> </p>
+                        <p class="detail" data-il8n="per_month">per month</p>
                     </div>
                 </div>
                 <div class="description">
                     <ul>
-                        <li><i class="fa-solid fa-cube fa-fade color1"></i> add <span class="underline"> 150
-                            </span>Order Monthly</li>
-                        <li><i class="fa-solid fa-check fa-fade color1"></i> Add Unlimted Products And Categories</li>
-                        <li><i class="fa-solid fa-people-group fa-fade color1"></i> Add <span class="underline"> 5
-                            </span> other Employess </li>
-                        <li><i class="fa-solid fa-check fa-fade color1"></i> Print Qr Coder receipt for your orders</li>
-                        <li><i class="fa-solid fa-check fa-fade color1"></i> Sales report and net profit</li>
-                        <li><i class="fa-solid fa-x fa-fade color1"></i> Print custom message on the receipts</li>
-                        <li style="text-align-last: left;"> <i class="fa-solid fa-check fa-fade color1"></i> Access
-                            Your Client data export them and view it</li>
-                        <li style="text-align-last: left;"><i class="fa-solid fa-x fa-fade color1"></i> Add your
-                            Expanses for more accurate net profit</li>
-                        <li style="text-align-last: left;"><i class="fa-solid fa-x fa-fade color1"></i> Support having
-                            your own e-commerce website</li>
-                        <li style="text-align-last: left;"><i class="fa-solid fa-x fa-fade color1"></i> export your
-                            stock reports data , and warehouse items cost</li>
-                        <li style="text-align-last: left;"><i class="fa-solid fa-x fa-fade color1"></i> Access the
-                            Shopify API and Maytapi Api and Webhooks</li>
+                        <li><i class="fa-solid fa-cube fa-fade color1"></i> <span data-il8n="add">add</span> <span
+                                class="underline"> 150 </span><span data-il8n="orderMonthly">Order Monthly</span></li>
+                        <li><i class="fa-solid fa-check fa-fade color1"></i> <span data-il8n="addUnlimited">Add Unlimted
+                                Products And Categories</span></li>
+                        <li><i class="fa-solid fa-people-group fa-fade color1"></i> <span data-il8n="add">Add</span>
+                            <span class="underline"> 5 </span> <span data-il8n="otherEmployees">other Employess</span>
+                        </li>
+                        <li><i class="fa-solid fa-check fa-fade color1"></i> <span data-il8n="print">Print Qr Code
+                                Receipt for your orders</span></li>
+                        <li><i class="fa-solid fa-check fa-fade color1"></i> <span data-il8n="salesReport">Sales report
+                                and net profit</span></li>
+                        <li><i class="fa-solid fa-x fa-fade color1"></i> <span data-il8n="print2">Print custom message
+                                on the receipts</span></li>
+                        <li><i class="fa-solid fa-check fa-fade color1"></i> <span data-il8n="access">Access Your Client
+                                data export them and view it</span></li>
+                        <li><i class="fa-solid fa-x fa-fade color1"></i> <span data-il8n="expenses">Add your Expenses
+                                for more accurate net profit</span></li>
+                        <li><i class="fa-solid fa-x fa-fade color1"></i> <span data-il8n="support">Support having your
+                                own e-commerce website</span></li>
+                        <li><i class="fa-solid fa-x fa-fade color1"></i> <span data-il8n="export">Export your stock
+                                reports data, and warehouse items cost</span></li>
+                        <li><i class="fa-solid fa-x fa-fade color1"></i> <span data-il8n="shopify">Access the Shopify
+                                API and Maytapi Api and Webhooks</span></li>
                     </ul>
                 </div>
 
             </div>
 
             <div class="standard box">
-                <h2 class="title3">Premium</h2>
+                <h2 class="title3" data-il8n="Premium">Premium</h2>
                 <div class="view">
                     <div class="icon">
                         <i class="fa-solid fa-plane fa-bounce package_icon2"></i>
                     </div>
                     <div class="cost">
-                        <p class="amount">350 Egp</p>
-                        <p class="detail">per month</p>
+                        <p class="amount">349 <span data-il8n="egp">Egp</span> </p>
+                        <p class="detail" data-il8n="per_month">per month</p>
                     </div>
                 </div>
                 <div class="description">
                     <ul>
-                        <li><i class="fa-solid fa-cube fa-fade color2"></i> add <span class="underline"> 500 </span>
-                            Order Monthly</li>
-                        <li><i class="fa-solid fa-check fa-fade color2"></i> Add Unlimted Products And Categories</li>
-                        <li><i class="fa-solid fa-people-group fa-fade color2"></i> Add <span class="underline"> 10
-                            </span> other Employess </li>
-                        <li><i class="fa-solid fa-check fa-fade color2"></i> Print Qr Coder receipt for your orders</li>
-                        <li><i class="fa-solid fa-check fa-fade color2"></i> Sales report and net profit</li>
-                        <li><i class="fa-solid fa-x fa-fade color2"></i> Print custom message on the receipts</li>
-                        <li style="text-align-last: left;"> <i class="fa-solid fa-check fa-fade color2"></i> Access
-                            Your Client data export them and view it</li>
-                        <li style="text-align-last: left;"><i class="fa-solid fa-check fa-fade color2"></i> Add your
-                            Expanses for more accurate net profit</li>
-                        <li style="text-align-last: left;"><i class="fa-solid fa-check fa-fade color2"></i> Support
-                            having your own e-commerce website</li>
-                        <li style="text-align-last: left;"><i class="fa-solid fa-check fa-fade color2"></i> export
-                            your stock reports data , and warehouse items cost</li>
-                        <li style="text-align-last: left;"><i class="fa-solid fa-x fa-fade color2"></i> Access the
-                            Shopify API and Maytapi Api and Webhooks</li>
+                        <li><i class="fa-solid fa-cube fa-fade color1"></i> <span data-il8n="add">add</span> <span
+                                class="underline"> 500 </span> <span data-il8n="orderMonthly">Order Monthly</span></li>
+                        <li><i class="fa-solid fa-check fa-fade color1"></i> <span data-il8n="addUnlimited">Add Unlimted
+                                Products And Categories</span></li>
+                        <li><i class="fa-solid fa-people-group fa-fade color1"></i> <span data-il8n="add">Add</span>
+                            <span class="underline"> 10 </span> <span data-il8n="otherEmployees">other Employess</span>
+                        </li>
+                        <li><i class="fa-solid fa-check fa-fade color1"></i> <span data-il8n="print">Print Qr Code
+                                Receipt for your orders</span></li>
+                        <li><i class="fa-solid fa-check fa-fade color1"></i> <span data-il8n="salesReport">Sales report
+                                and net profit</span></li>
+                        <li><i class="fa-solid fa-x fa-fade color1"></i> <span data-il8n="print2">Print custom message
+                                on the receipts</span></li>
+                        <li><i class="fa-solid fa-check fa-fade color1"></i> <span data-il8n="access">Access Your Client
+                                data export them and view it</span></li>
+                        <li><i class="fa-solid fa-check fa-fade color1"></i> <span data-il8n="expenses">Add your
+                                Expenses for more accurate net profit</span></li>
+                        <li><i class="fa-solid fa-check fa-fade color1"></i> <span data-il8n="support">Support having
+                                your own e-commerce website</span></li>
+                        <li><i class="fa-solid fa-check fa-fade color1"></i> <span data-il8n="export">Export your stock
+                                reports data, and warehouse items cost</span></li>
+                        <li><i class="fa-solid fa-x fa-fade color1"></i> <span data-il8n="shopify">Access the Shopify
+                                API and Maytapi Api and Webhooks</span></li>
                     </ul>
                 </div>
 
             </div>
 
             <div class="business box">
-                <h2 class="title3">Enterorise</h2>
+                <h2 class="title3" data-il8n="Enterorise">Enterorise</h2>
                 <div class="view">
                     <div class="icon">
                         <i class="fa-solid fa-rocket fa-beat-fade package_icon3"></i>
                     </div>
                     <div class="cost">
-                        <p class="amount">499 Egp</p>
-                        <p class="detail">per month</p>
+                        <p class="amount">499 <span data-il8n="egp">Egp</span> </p>
+                        <p class="detail" data-il8n="per_month">per month</p>
                     </div>
                 </div>
                 <div class="description">
                     <ul>
-                        <li><i class="fa-solid fa-cube fa-fade color3"></i> add <span class="underline"> 2500 </span>
-                            Order Monthly</li>
-                        <li><i class="fa-solid fa-check fa-fade color3"></i> Add Unlimted Products And Categories</li>
-                        <li><i class="fa-solid fa-people-group fa-fade color3"></i> Add <span class="underline"> 20
-                            </span> other Employess </li>
-                        <li><i class="fa-solid fa-check fa-fade color3"></i> Print Qr Coder receipt for your orders</li>
-                        <li><i class="fa-solid fa-check fa-fade color3"></i> Sales report and net profit</li>
-                        <li><i class="fa-solid fa-check fa-fade color3"></i> Print custom message on the receipts</li>
-                        <li style="text-align-last: left;"> <i class="fa-solid fa-check fa-fade color3"></i> Access
-                            Your Client data export them and view it</li>
-                        <li style="text-align-last: left;"><i class="fa-solid fa-check fa-fade color3"></i> Add your
-                            Expanses for more accurate net profit</li>
-                        <li style="text-align-last: left;"><i class="fa-solid fa-check fa-fade color3"></i> Support
-                            having your own e-commerce website</li>
-                        <li style="text-align-last: left;"><i class="fa-solid fa-check fa-fade color3"></i> export
-                            your stock reports data , and warehouse items cost</li>
-                        <li style="text-align-last: left;"><i class="fa-solid fa-check fa-fade color3"></i> Access the
-                            Shopify API and Maytapi Api and Webhooks</li>
+                        <li><i class="fa-solid fa-cube fa-fade color1"></i> <span data-il8n="add">add</span> <span
+                                class="underline"> 2500 </span> <span data-il8n="orderMonthly">Order Monthly</span></li>
+                        <li><i class="fa-solid fa-check fa-fade color1"></i> <span data-il8n="addUnlimited">Add Unlimted
+                                Products And Categories</span></li>
+                        <li><i class="fa-solid fa-people-group fa-fade color1"></i> <span data-il8n="add">Add</span>
+                            <span class="underline"> 20 </span> <span data-il8n="otherEmployees">other Employess</span>
+                        </li>
+                        <li><i class="fa-solid fa-check fa-fade color1"></i> <span data-il8n="print">Print Qr Code
+                                Receipt for your orders</span></li>
+                        <li><i class="fa-solid fa-check fa-fade color1"></i> <span data-il8n="salesReport">Sales report
+                                and net profit</span></li>
+                        <li><i class="fa-solid fa-check fa-fade color1"></i> <span data-il8n="print2">Print custom
+                                message on the receipts</span></li>
+                        <li><i class="fa-solid fa-check fa-fade color1"></i> <span data-il8n="access">Access Your Client
+                                data export them and view it</span></li>
+                        <li><i class="fa-solid fa-check fa-fade color1"></i> <span data-il8n="expenses">Add your
+                                Expenses for more accurate net profit</span></li>
+                        <li><i class="fa-solid fa-check fa-fade color1"></i> <span data-il8n="support">Support having
+                                your own e-commerce website</span></li>
+                        <li><i class="fa-solid fa-check fa-fade color1"></i> <span data-il8n="export">Export your stock
+                                reports data, and warehouse items cost</span></li>
+                        <li><i class="fa-solid fa-check fa-fade color1"></i> <span data-il8n="shopify">Access the
+                                Shopify API and Maytapi Api and Webhooks</span></li>
                     </ul>
                 </div>
 
@@ -294,54 +354,54 @@
         </div>
     </section>
     <section>
-        < <div class="landing_page" id="contact">
+        <div class="landing_page" id="contact">
             <div class="responsive-container-block big-container">
 
                 <div class="responsive-container-block container">
                     <div class="responsive-cell-block wk-desk-6 wk-ipadp-6 wk-tab-12 wk-mobile-12 left-one">
                         <div class="content-box">
-                            <p class="text-blk section-head">
+                            <p class="text-blk section-head" data-il8n="contact">
                                 Cotact us
                             </p>
-                            <p class="text-blk section-subhead">
+                            <p class="text-blk section-subhead" data-il8n="problems">
                                 If you have any problem with download the app , or if you need any support or tutorial
                             </p>
                         </div>
                     </div>
                     <div class="responsive-cell-block wk-ipadp-6 wk-tab-12 wk-mobile-12 wk-desk-6 right-one" id="i1zj">
-                        <form class="form-box">
+                        <form class="form-box" id="form">
                             <div class="container-block form-wrapper">
                                 <p class="text-blk contactus-head">
                                     <a class="link" href="">
                                     </a>
-                                    Get a quote
+                                    <span data-il8n="head_contact">Get a quote</span>
                                 </p>
-                                <p class="text-blk contactus-subhead">
+                                <p class="text-blk contactus-subhead" data-il8n="get_back">
                                     We will get back to you in 24 hours
                                 </p>
                                 <div class="responsive-container-block">
                                     <div class="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-12 wk-ipadp-12"
                                         id="i10mt-7">
-                                        <input class="input" id="ijowk-7" name="FirstName" placeholder="First Name">
+                                        <input class="input" id="first" name="FirstName" placeholder="First Name">
                                     </div>
                                     <div class="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-12 wk-ipadp-12"
                                         id="i1ro7">
-                                        <input class="input" id="indfi-5" name="Last Name" placeholder="Last Name">
+                                        <input class="input" id="last" name="Last Name" placeholder="Last Name">
                                     </div>
                                     <div class="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-6 wk-ipadp-6 emial"
                                         id="ityct">
-                                        <input class="input" id="ipmgh-7" name="Email" placeholder="Email">
+                                        <input class="input" id="email" name="Email" placeholder="Email">
                                     </div>
                                     <div class="responsive-cell-block wk-desk-6 wk-ipadp-6 wk-tab-12 wk-mobile-12">
-                                        <input class="input" id="imgis-6" name="PhoneNumber" placeholder="Phone Number">
+                                        <input class="input" id="phone" name="PhoneNumber" placeholder="Phone Number">
                                     </div>
                                     <div class="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-12 wk-ipadp-12"
                                         id="i634i-7">
-                                        <textarea aria-placeholder="Type message here" class="textinput" id="i5vyy-7"
+                                        <textarea aria-placeholder="Type message here" class="textinput" id="message"
                                             placeholder="Type message here"></textarea>
                                     </div>
                                 </div>
-                                <button class="submit-btn">
+                                <button class="submit-btn" id="button_contact" data-il8n="head_contact">
                                     Get quote
                                 </button>
                             </div>
@@ -349,7 +409,7 @@
                     </div>
                 </div>
             </div>
-            </div>
+        </div>
     </section>
 
 
@@ -360,16 +420,18 @@
                 <div class="row">
                     <div class="col-12 col-md-6 col-lg-3">
                         <div class="kilimanjaro_part">
-                            <h5>About Us</h5>
-                            <p>Vondera is a comprehensive mobile app available on App Store and Play Store, designed to
+                            <h5 data-il8n="about">About Us</h5>
+                            <p data-il8n="footer_about"> Vondera is a comprehensive mobile app available on App Store
+                                and Play Store, designed to
                                 streamline e-commerce store management.</p>
-                            <p> It empowers store owners with features like stock tracking, order receipt printing, and
+                            <p data-il8n="footer_about2"> It empowers store owners with features like stock tracking,
+                                order receipt printing, and
                                 sales analytics. With collaborative tools, order and shipping updates, and expense
                                 tracking, Vondera simplifies operations and facilitates accurate net profit
                                 calculations.</p>
                         </div>
                         <div class="kilimanjaro_part m-top-15">
-                            <h5>Social Links</h5>
+                            <h5 data-il8n="soical">Social Links</h5>
                             <ul class="kilimanjaro_social_links">
                                 <li><a href="https://www.facebook.com/vondera.eg" target="_blank"><i
                                             class="fa-brands fa-facebook fa-fade color1"></i> Facebook</a>
@@ -394,38 +456,41 @@
                     </div>
                     <div class="col-12 col-md-6 col-lg-3">
                         <div class="kilimanjaro_part m-top-15">
-                            <h5>Important Links</h5>
+                            <h5 data-il8n="important_links">Important Links</h5>
                             <ul class="kilimanjaro_links">
-                                <li><a href="#home">Home</a></li>
-                                <li><a href="#about">About</a></li>
-                                <li><a href="#pricing">Pricing</a></li>
-                                <li><a href="#contact">Contact us</a></li>
-                                <li><a href="policy.html">Privacy Policy</a></li>
-                                <li><a href="terms.html">Terms & conditions</a></li>
+                                <li><a href="#home" data-il8n="home">Home</a></li>
+                                <li><a href="#about" data-il8n="about">About</a></li>
+                                <li><a href="#pricing" data-il8n="pricing">Pricing</a></li>
+                                <li><a href="#contact" data-il8n="contact">Contact us</a></li>
+                                <li><a href="policy.html" data-il8n="privacy">Privacy Policy</a></li>
+                                <li><a href="terms.html" data-il8n="terms">Terms & conditions</a></li>
                             </ul>
                         </div>
                     </div>
                     <div class="col-12 col-md-6 col-lg-3">
                         <div class="kilimanjaro_part">
-                            <h5>Download The App</h5>
+                            <h5 data-il8n="app_download">Download The App</h5>
                             <div class="footer_button">
-                                <button><i class="fa-brands fa-apple fa-fade pad-right"></i>App Store</button>
+                                <button><i class="fa-brands fa-apple fa-fade pad-right"
+                                        onclick="openLinkInNewWindowplaystore('https://testflight.apple.com/join/OrIKxxTN')"></i></i>
+                                    <span data-il8n="app_Store">App Store</span> </button>
                                 <button
-                                    onclick="openLinkInNewWindowplaystore(' https://play.google.com/store/apps/details?id=com.armjld.brands ')"><i
-                                        class="fa-brands fa-google-play fa-fade pad-right"></i>Google Play</button>
+                                    onclick="downloadApk()"><i
+                                        class="fa-brands fa-google-play fa-fade pad-right"></i> <span
+                                        data-il8n="google_play"> Google Play</span> </button>
                             </div>
 
                         </div>
                     </div>
                     <div class="col-12 col-md-6 col-lg-3">
                         <div class="kilimanjaro_part">
-                            <h5>Quick Contact</h5>
+                            <h5 data-il8n="contact">Quick Contact</h5>
                             <div class="kilimanjaro_single_contact_info">
-                                <h5>Phone:</h5>
-                                <p><a>+20 1551542540</a></p>
+                                <h5 data-il8n="phone">Phone:</h5>
+                                <p><a>01551542540</a></p>
                             </div>
                             <div class="kilimanjaro_single_contact_info">
-                                <h5>Email:</h5>
+                                <h5 data-il8n="email">Email:</h5>
                                 <p><a href="#">info@vondera.app</a></p>
                             </div>
                         </div>
@@ -446,6 +511,26 @@
         </div>
     </footer>
     <script>
+        function downloadApk() {
+            // Replace "path-to-your-app.apk" with the actual path to your hosted APK file
+            var apkUrl = "vondera.apk";
+
+            // Create a hidden anchor element
+            var a = document.createElement("a");
+            a.style.display = "none";
+            a.href = apkUrl;
+
+            // Set the filename for the download
+            a.download = "vondera.apk"; // You can specify any filename here
+
+            // Append the anchor to the document body and trigger a click event
+            document.body.appendChild(a);
+            a.click();
+
+            // Remove the anchor element from the DOM
+            document.body.removeChild(a);
+        }
+
         function openLinkInNewWindowplaystore(url) {
             window.open(url, '_blank');
         }
@@ -455,6 +540,7 @@
     <script src="js/script.js" type="module"></script>
     <script src="js/navbar.js" type="module"></script>
     <script src="js/translation.js" type="module"></script>
+    <script src="js/firebase.js" type="module"></script>
     <script>
         // Add event listener to the button
         document.getElementById("getLink").addEventListener("click", function () {
@@ -469,7 +555,7 @@
             if (isIOS) {
                 window.location.href = appStoreLink;
             } else if (isAndroid) {
-                window.location.href = googlePlayLink;
+                downloadApk();
             } else {
                 window.location.href = googlePlayLink;
             }

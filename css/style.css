@@ -1184,3 +1184,6 @@ img {
   font-size: 60px !important;
   color: #cebee9 !important;
 }
+.box .description{
+  padding-right: 20px;
+}

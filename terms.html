@@ -18,31 +18,38 @@
 </head>
 
 <body>
+    <!--- NavBar --->
     <section class="navigation">
         <div class="nav-container">
 
-            <nav>
-                <div class="nav-mobile"><a id="navbar-toggle" href="#!"><span></span></a></div>
+            <nav  id="nav_cont">
+                <div class="nav-mobile" id="mob_nav"><a id="navbar-toggle" href="#!"><span></span></a></div>
                 <div class="flex">
-                    <div class="brand">
-                        <a href="index.html" class="logo_font">Vondera</a>
+                    <div class="brand" id="logo_nav">
+                        <a href="index.html#home" class="logo_font">Vondera</a>
                     </div>
                     <ul class="nav-list">
                         <li>
-                            <a href="index.html#home">Home</a>
+                            <a data-il8n="home" href="index.html#home">Home</a>
                         </li>
                         <li>
-                            <a href="index.html#about">About</a>
+                            <a data-il8n="about" href="index.html#about">About</a>
                         <li>
-                            <a href="index.html#pricing">Pricing</a>
+                            <a data-il8n="pricing" href="index.html#pricing">Pricing</a>
                         </li>
                         <li>
-                            <a href="index.html#contact">Contact</a>
+                            <a data-il8n="contact" href="index.html#contact">Contact</a>
                         </li>
+                        <select id="lang_select" class="mt-2">
+                            <option value="en" selected data-il8n="english">English </option>
+                            <option value="ar" data-il8n="arabic">Arabic</option>
+                        </select>
+
+
                     </ul>
                     <div class="buttons">
-                        <a href="#" class="button_app" id="getLink" style="text-decoration: none;" target="_blank">Get
-                            App</a>
+                        <a href="#" class="button_app" id="getLink" style="text-decoration: none;" target="_blank"
+                            data-il8n="app_download">Get App</a>
                     </div>
                 </div>
             </nav>
@@ -67,94 +74,122 @@
             <div class="arrow-bottom right"></div>
             <div id="content">
                 <div class="top">
-                    <div class="title">Terms & Conditions</div>
-                    <div class="subtitle logo_font">Vondera</div>
-                    <div class="time">Last updated 31-8-2023</div>
+                    <div class="title" data-il8n="terms">Terms & Conditions</div>
+                    <div class="subtitle logo_font" data-il8n="vondera">Vondera</div>
+                    <div class="time" data-il8n="data">Last updated 31-8-2023</div>
                 </div>
                 <div class="body">
-                    <h1>Terms & Conditions</h1>
-                    <p>Last Updated: 31-8-2023</p>
-                    <p>Welcome to Vondera, your partner in efficient ecommerce management. By accessing and using the
-                        Vondera app  and visiting our website at <a
-                            href="http://www.vondera.app">www.vondera.app</a>  you agree to be bound by the
-                        following terms and conditions.</p>
-                    <p>Please read these terms carefully before using our services.</p>
-
-                    <h2>1. Subscription Plans</h2>
-                    <p><strong>a) Free Plan:</strong></p>
-                    <ul>
-                        <li>Monthly Cost: Free</li>
-                        <li>Included Features:
-                            <ul>
-                                <li>Add up to 15 Orders Monthly</li>
-                                <li>Add Unlimited Products and Categories</li>
-                                <li>Add 3 Other Employees</li>
-                                <li>Print QR Code Receipts for Your Orders</li>
-                                <li>View Sales Reports and Net Profit</li>
-                                <li>Print Custom Messages on Receipts</li>
-                                <li>Access and Export Client Data</li>
-                                <li>Add Expenses for Accurate Net Profit</li>
-                            </ul>
-                        </li>
-                    </ul>
-
-                    <p><strong>b) Standard Plan:</strong></p>
-                    <ul>
-                        <li>Monthly Cost: 150 EGP</li>
-                        <li>Included Features:
-                            <ul>
-                                <li>Add up to 150 Orders Monthly</li>
-                                <li>Add Unlimited Products and Categories</li>
-                                <li>Add 5 Other Employees</li>
-                                <li>Print QR Code Receipts for Your Orders</li>
-                                <li>View Sales Reports and Net Profit</li>
-                                <li>Print Custom Messages on Receipts</li>
-                                <li>Access and Export Client Data</li>
-                                <li>Add Expenses for Accurate Net Profit</li>
-                            </ul>
-                        </li>
-                    </ul>
-
-                    <!-- Continue with the remaining plans and content -->
-
-                    <h2>2. User Content</h2>
-                    <p><strong>a) Your Responsibility:</strong></p>
-                    <p>You are solely responsible for any content you upload, share, or submit using our App and
-                        Website. You must ensure that your content complies with all applicable laws and regulations.
-                    </p>
-
-                    <p><strong>b) Use of User Content:</strong></p>
-                    <p>By using our App and Website, you grant us a non-exclusive, worldwide, royalty-free license to
-                        use, modify, reproduce, and distribute your user-generated content for the purpose of providing
-                        and promoting our services.</p>
-
-                    <h2>3. Intellectual Property</h2>
-                    <p><strong>a) Ownership:</strong></p>
-                    <p>The App, Website, and all associated content, including but not limited to text, graphics, logos,
+                    <p data-il8n="welcomeMessage">Welcome to Vondera, your partner in efficient ecommerce management. By accessing and using the
+                        Vondera app and visiting our website at <a href="http://www.vondera.app">www.vondera.app</a> you
+                        agree to be bound by the following terms and conditions. <span data-il8n="readTerms">Please read these terms carefully before using our services.</span></p>
+                    
+                    <h2><span data-il8n="subscriptionPlans">1. Subscription Plans</span></h2>
+                    <!-- Free Plan -->
+                    <section class="pricing-plan">
+                        <h2><span data-il8n="freePlan">Free Plan:</span></h2>
+                        <p><strong><span data-il8n="freePlanMonthlyCost">Monthly Cost:</span></strong> <span data-il8n="freePlanMonthlyCostValue">Free</span></p>
+                        <p><strong><span data-il8n="freePlanFeatures">Included Features:</span></strong></p>
+                        <ul>
+                            <li data-il8n="freePlanFeature1"><span>Add up to 15 Orders Monthly</span></li>
+                            <li data-il8n="freePlanFeature2"><span>Add Unlimited Products and Categories</span></li>
+                            <li data-il8n="freePlanFeature3"><span>Add 3 Other Employees</span></li>
+                            <li data-il8n="freePlanFeature4"><span>Print QR Code Receipts for Your Orders</span></li>
+                            <li data-il8n="freePlanFeature5"><span>View Sales Reports and Net Profit</span></li>
+                            <li data-il8n="freePlanFeature6"><span>Print Custom Messages on Receipts</span></li>
+                            <li data-il8n="freePlanFeature7"><span>Access and Export Client Data</span></li>
+                            <li data-il8n="freePlanFeature8"><span>Add Expenses for Accurate Net Profit</span></li>
+                        </ul>
+                    </section>
+                    
+                    <!-- Standard Plan -->
+                    <section class="pricing-plan">
+                        <h2><span data-il8n="standardPlan">Standard Plan:</span></h2>
+                        <p><strong><span data-il8n="standardPlanMonthlyCost">Monthly Cost:</span></strong> <span data-il8n="standardPlanMonthlyCostValue">150 EGP</span></p>
+                        <p><strong><span data-il8n="standardPlanFeatures">Included Features:</span></strong></p>
+                        <ul>
+                            <li data-il8n="standardPlanFeature1"><span>Add up to 150 Orders Monthly</span></li>
+                            <li data-il8n="standardPlanFeature2"><span>Add Unlimited Products and Categories</span></li>
+                            <li data-il8n="standardPlanFeature3"><span>Add 5 Other Employees</span></li>
+                            <li data-il8n="standardPlanFeature4"><span>Print QR Code Receipts for Your Orders</span></li>
+                            <li data-il8n="standardPlanFeature5"><span>View Sales Reports and Net Profit</span></li>
+                            <li data-il8n="standardPlanFeature6"><span>Print Custom Messages on Receipts</span></li>
+                            <li data-il8n="standardPlanFeature7"><span>Access and Export Client Data</span></li>
+                            <li data-il8n="standardPlanFeature8"><span>Add Expenses for Accurate Net Profit</span></li>
+                        </ul>
+                    </section>
+                    
+                    <!-- Premium Plan -->
+                    <section class="pricing-plan">
+                        <h2><span data-il8n="premiumPlan">Premium Plan:</span></h2>
+                        <p><strong><span data-il8n="premiumPlanMonthlyCost">Monthly Cost:</span></strong> <span data-il8n="premiumPlanMonthlyCostValue">350 EGP</span></p>
+                        <p><strong><span data-il8n="premiumPlanFeatures">Included Features:</span></strong></p>
+                        <ul>
+                            <li data-il8n="premiumPlanFeature1"><span>Add up to 500 Orders Monthly</span></li>
+                            <li data-il8n="premiumPlanFeature2"><span>Add Unlimited Products and Categories</span></li>
+                            <li data-il8n="premiumPlanFeature3"><span>Add 10 Other Employees</span></li>
+                            <li data-il8n="premiumPlanFeature4"><span>Print QR Code Receipts for Your Orders</span></li>
+                            <li data-il8n="premiumPlanFeature5"><span>View Sales Reports and Net Profit</span></li>
+                            <li data-il8n="premiumPlanFeature6"><span>Print Custom Messages on Receipts</span></li>
+                            <li data-il8n="premiumPlanFeature7"><span>Access and Export Client Data</span></li>
+                            <li data-il8n="premiumPlanFeature8"><span>Add Expenses for Accurate Net Profit Calculation</span></li>
+                            <li data-il8n="premiumPlanFeature9"><span>Support for Your E-commerce Website</span></li>
+                            <li data-il8n="premiumPlanFeature10"><span>Export Stock Reports Data and Warehouse Items Cost</span></li>
+                        </ul>
+                    </section>
+                    
+                    <!-- Enterprise Plan -->
+                    <section class="pricing-plan">
+                        <h2><span data-il8n="enterprisePlan">Enterprise Plan:</span></h2>
+                        <p><strong><span data-il8n="enterprisePlanMonthlyCost">Monthly Cost:</span></strong> <span data-il8n="enterprisePlanMonthlyCostValue">499 EGP</span></p>
+                        <p><strong><span data-il8n="enterprisePlanFeatures">Included Features:</span></strong></p>
+                        <ul>
+                            <li data-il8n="enterprisePlanFeature1"><span>Add up to 2500 Orders Monthly</span></li>
+                            <li data-il8n="enterprisePlanFeature2"><span>Add Unlimited Products and Categories</span></li>
+                            <li data-il8n="enterprisePlanFeature3"><span>Add 20 Other Employees</span></li>
+                            <li data-il8n="enterprisePlanFeature4"><span>Print QR Code Receipts for Your Orders</span></li>
+                            <li data-il8n="enterprisePlanFeature5"><span>View Sales Reports and Net Profit</span></li>
+                            <li data-il8n="enterprisePlanFeature6"><span>Print Custom Messages on Receipts</span></li>
+                            <li data-il8n="enterprisePlanFeature7"><span>Access and Export Client Data</span></li>
+                            <li data-il8n="enterprisePlanFeature8"><span>Add Expenses for Accurate Net Profit Calculation</span></li>
+                            <li data-il8n="enterprisePlanFeature9"><span>Support for Your E-commerce Website</span></li>
+                            <li data-il8n="enterprisePlanFeature10"><span>Export Stock Reports Data and Warehouse Items Cost</span></li>
+                            <li data-il8n="enterprisePlanFeature11"><span>Access to Shopify API, Maytapi API, and Webhooks</span></li>
+                        </ul>
+                    </section>
+                    
+                    <!-- Continue with the remaining content -->
+                    
+                    <h2><span data-il8n="userContent">2. User Content</span></h2>
+                    <p><strong><span data-il8n="userContentResponsibility">a) Your Responsibility:</span></strong></p>
+                    <p data-il8n="userContentResponsibilityText">You are solely responsible for any content you upload, share, or submit using our App and
+                        Website. You must ensure that your content complies with all applicable laws and regulations.</p>
+                    
+                    <p><strong><span data-il8n="userContentUse">b) Use of User Content:</span></strong></p>
+                    <p data-il8n="userContentUseText">By using our App and Website, you grant us a non-exclusive, worldwide, royalty-free license to
+                        use, modify, reproduce, and distribute your user-generated content for the purpose of providing and promoting our services.</p>
+                    
+                    <h2><span data-il8n="intellectualProperty">3. Intellectual Property</span></h2>
+                    <p><strong><span data-il8n="intellectualPropertyOwnership">a) Ownership:</span></strong></p>
+                    <p data-il8n="intellectualPropertyOwnershipText">The App, Website, and all associated content, including but not limited to text, graphics, logos,
                         and images, are owned by us and protected by intellectual property laws.</p>
-
-                    <p><strong>b) Restricted Use:</strong></p>
-                    <p>You may not reproduce, modify, distribute, or create derivative works based on our content
+                    
+                    <p><strong><span data-il8n="intellectualPropertyRestrictedUse">b) Restricted Use:</span></strong></p>
+                    <p data-il8n="intellectualPropertyRestrictedUseText">You may not reproduce, modify, distribute, or create derivative works based on our content
                         without our explicit written consent.</p>
-
-                    <h2>4. Limitation of Liability</h2>
-                    <p><strong>a) No Guarantees:</strong></p>
-                    <p>While we strive to provide a seamless experience, we do not guarantee the accuracy, completeness,
-                        or reliability of our services. You acknowledge that your use of the App and Website is at your
-                        own risk.</p>
-
-                    <p><strong>b) Indirect Damages:</strong></p>
-                    <p>We are not liable for any indirect, incidental, special, or consequential damages arising from
+                    
+                    <h2><span data-il8n="limitationOfLiability">4. Limitation of Liability</span></h2>
+                    <p><strong><span data-il8n="limitationOfLiabilityNoGuarantees">a) No Guarantees:</span></strong></p>
+                    <p data-il8n="limitationOfLiabilityNoGuaranteesText">While we strive to provide a seamless experience, we do not guarantee the accuracy, completeness,
+                        or reliability of our services. You acknowledge that your use of the App and Website is at your own risk.</p>
+                    
+                    <p><strong><span data-il8n="limitationOfLiabilityIndirectDamages">b) Indirect Damages:</span></strong></p>
+                    <p data-il8n="limitationOfLiabilityIndirectDamagesText">We are not liable for any indirect, incidental, special, or consequential damages arising from
                         your use of the App or Website, including but not limited to lost profits or data.</p>
-
-                    <h2>5. Modifications to Terms</h2>
-                    <p>We reserve the right to modify or update these Terms & Conditions at any time. Changes will be
-                        effective upon posting to the Website. Continued use of the App and Website after changes have
-                        been made constitutes your acceptance of the updated terms.</p>
-
-                    <h2>6. Contact Us</h2>
-                    <p>If you have any questions, concerns, or inquiries about these Terms & Conditions, please contact
-                        us at <a href="mailto:vondera.eg@gmail.com">vonderA.eg@gmail.com</a>.</p>
+                    
+                    <h2><span data-il8n="modificationsToTerms">5. Modifications to Terms</span></h2>
+                    <p data-il8n="modificationsToTermsText">We reserve the right to modify or update these Terms & Conditions at any time. Changes will be
+                        effective upon posting to the Website. Continued use of the App and Website after changes have been made constitutes your acceptance of the updated terms.</p>
+                    
                 </div>
             </div>
         </div>
@@ -166,16 +201,16 @@
                 <div class="row">
                     <div class="col-12 col-md-6 col-lg-3">
                         <div class="kilimanjaro_part">
-                            <h5>About Us</h5>
-                            <p>Vondera is a comprehensive mobile app available on App Store and Play Store, designed to
+                            <h5 data-il8n="about">About Us</h5>
+                            <p data-il8n="footer_about"> Vondera is a comprehensive mobile app available on App Store and Play Store, designed to
                                 streamline e-commerce store management.</p>
-                            <p> It empowers store owners with features like stock tracking, order receipt printing, and
+                            <p data-il8n="footer_about2"> It empowers store owners with features like stock tracking, order receipt printing, and
                                 sales analytics. With collaborative tools, order and shipping updates, and expense
                                 tracking, Vondera simplifies operations and facilitates accurate net profit
                                 calculations.</p>
                         </div>
                         <div class="kilimanjaro_part m-top-15">
-                            <h5>Social Links</h5>
+                            <h5 data-il8n="soical">Social Links</h5>
                             <ul class="kilimanjaro_social_links">
                                 <li><a href="https://www.facebook.com/vondera.eg" target="_blank"><i
                                             class="fa-brands fa-facebook fa-fade color1"></i> Facebook</a>
@@ -200,38 +235,38 @@
                     </div>
                     <div class="col-12 col-md-6 col-lg-3">
                         <div class="kilimanjaro_part m-top-15">
-                            <h5>Important Links</h5>
+                            <h5 data-il8n="important_links">Important Links</h5>
                             <ul class="kilimanjaro_links">
-                                <li><a href="index.html#home">Home</a></li>
-                                <li><a href="index.html#about">About</a></li>
-                                <li><a href="index.html#pricing">Pricing</a></li>
-                                <li><a href="index.html#contact">Contact us</a></li>
-                                <li><a href="policy.html">Privacy Policy</a></li>
-                                <li><a href="terms.html">Terms & conditions</a></li>
+                                <li><a href="index.html#home" data-il8n="home">Home</a></li>
+                                <li><a href="index.html#about" data-il8n="about">About</a></li>
+                                <li><a href="index.html#pricing" data-il8n="pricing">Pricing</a></li>
+                                <li><a href="index.html#contact" data-il8n="contact">Contact us</a></li>
+                                <li><a href="policy.html" data-il8n="privacy">Privacy Policy</a></li>
+                                <li><a href="terms.html" data-il8n="terms">Terms & conditions</a></li>
                             </ul>
                         </div>
                     </div>
                     <div class="col-12 col-md-6 col-lg-3">
                         <div class="kilimanjaro_part">
-                            <h5>Download The App</h5>
+                            <h5 data-il8n="app_download">Download The App</h5>
                             <div class="footer_button">
-                                <button><i class="fa-brands fa-apple fa-fade pad-right"></i>App Store</button>
+                                <button><i class="fa-brands fa-apple fa-fade pad-right"></i> <span data-il8n="app_Store">App Store</span>  </button>
                                 <button
                                     onclick="openLinkInNewWindowplaystore(' https://play.google.com/store/apps/details?id=com.armjld.brands ')"><i
-                                        class="fa-brands fa-google-play fa-fade pad-right"></i>Google Play</button>
+                                        class="fa-brands fa-google-play fa-fade pad-right"></i> <span data-il8n="google_play"> Google Play</span> </button>
                             </div>
 
                         </div>
                     </div>
                     <div class="col-12 col-md-6 col-lg-3">
                         <div class="kilimanjaro_part">
-                            <h5>Quick Contact</h5>
+                            <h5 data-il8n="contact" >Quick Contact</h5>
                             <div class="kilimanjaro_single_contact_info">
-                                <h5>Phone:</h5>
-                                <p><a>+20 1551542540</a></p>
+                                <h5 data-il8n="phone">Phone:</h5>
+                                <p><a>01551542540</a></p>
                             </div>
                             <div class="kilimanjaro_single_contact_info">
-                                <h5>Email:</h5>
+                                <h5 data-il8n="email">Email:</h5>
                                 <p><a href="#">info@vondera.app</a></p>
                             </div>
                         </div>
@@ -260,6 +295,7 @@
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script src="js/script.js" type="module"></script>
     <script src="js/navbar.js" type="module"></script>
+    <script src="js/translationpolicy.js" type="module"></script>
     <script>
         // Add event listener to the button
         document.getElementById("getLink").addEventListener("click", function () {

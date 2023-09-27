@@ -1,7 +1,7 @@
 {
   "hosting": {
-    "site": "vondera-landinge",
-    "public": "./",
+    "site":"vondera-landing", 
+    "public": ".",
     "ignore": [
       "firebase.json",
       "**/.*",

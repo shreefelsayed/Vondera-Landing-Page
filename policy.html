@@ -21,28 +21,34 @@
     <section class="navigation">
         <div class="nav-container">
 
-            <nav>
-                <div class="nav-mobile"><a id="navbar-toggle" href="#!"><span></span></a></div>
+            <nav id="nav_cont">
+                <div class="nav-mobile" id="mob_nav"><a id="navbar-toggle" href="#!"><span></span></a></div>
                 <div class="flex">
-                    <div class="brand">
-                        <a href="index.html" class="logo_font">Vondera</a>
+                    <div class="brand" id="logo_nav">
+                        <a href="index.html#home" class="logo_font">Vondera</a>
                     </div>
                     <ul class="nav-list">
                         <li>
-                            <a href="index.html#home">Home</a>
+                            <a data-il8n="home" href="index.html#home">Home</a>
                         </li>
                         <li>
-                            <a href="index.html#about">About</a>
+                            <a data-il8n="about" href="index.html#about">About</a>
                         <li>
-                            <a href="index.html#pricing">Pricing</a>
+                            <a data-il8n="pricing" href="index.html#pricing">Pricing</a>
                         </li>
                         <li>
-                            <a href="index.html#contact">Contact</a>
+                            <a data-il8n="contact" href="index.html#contact">Contact</a>
                         </li>
+                        <select id="lang_select" class="mt-2">
+                            <option value="en" selected data-il8n="english">English </option>
+                            <option value="ar" data-il8n="arabic">Arabic</option>
+                        </select>
+
+
                     </ul>
                     <div class="buttons">
-                        <a href="#" class="button_app" id="getLink" style="text-decoration: none;" target="_blank">Get
-                            App</a>
+                        <a href="#" class="button_app" id="getLink" style="text-decoration: none;" target="_blank"
+                            data-il8n="app_download">Get App</a>
                     </div>
                 </div>
             </nav>
@@ -67,71 +73,94 @@
             <div class="arrow-bottom right"></div>
             <div id="content">
                 <div class="top">
-                    <div class="title">Privacy Policy</div>
-                    <div class="subtitle logo_font">Vondera</div>
-                    <div class="time">Last updated 31-8-2023</div>
+                    <div class="title" data-il8n="privacy">Privacy Policy</div>
+                    <div class="subtitle logo_font" data-il8n="vondera">Vondera</div>
+                    <div class="time" data-il8n="date">Last updated 31-8-2023</div>
                 </div>
                 <div class="body">
-                    <h1>Privacy Policy</h1>
-                    <p>Last Updated: 31-8-2023</p>
-                    <p>Thank you for choosing Vondera, an app designed to streamline your business operations. This
-                        Privacy Policy outlines how we collect, use, disclose, and safeguard your information when you
-                        use our Vondera app  and visit our website at <a
-                            href="http://www.vondera.app">www.vondera.app</a> By accessing the App and
-                        using our services, you acknowledge and agree to the practices described in this policy.</p>
-
-                    <h2>1. Information We Collect</h2>
-                    <p><strong>a) Personal Information:</strong></p>
-                    <p>We may collect personal information from you, such as your name, email address, and contact
-                        details, when you register for an account, subscribe to our services, or contact us for support.
-                        This information is essential for providing a personalized and effective experience.</p>
-
-                    <p><strong>b) Usage Information:</strong></p>
-                    <p>To enhance our services, we gather data on how you interact with the App and Website. This
-                        includes tracking your actions, preferences, and transactions within the platform.</p>
-
-                    <p><strong>c) Device Information:</strong></p>
-                    <p>We may collect information about your device, such as device type, operating system, browser
-                        type, and unique device identifiers. This data helps us optimize our services for various
-                        devices and platforms.</p>
-
-                    <h2>2. How We Use Your Information</h2>
-                    <p><strong>a) Providing Services:</strong></p>
-                    <p>We utilize your information to deliver the services you've requested. This includes managing your
-                        inventory, tracking sales, generating reports, and facilitating communication within your team.
+                    <h1 data-il8n="privacy">Privacy Policy</h1>
+                    <p data-il8n="date">Last Updated: 31-8-2023</p>
+                    <p><span data-il8n="privacy1">Thank you for choosing Vondera, an app designed to streamline your
+                            business operations. This
+                            Privacy Policy outlines how we collect, use, disclose, and safeguard your information when
+                            you
+                            use our Vondera app and visit our website at </span>
+                        <a href="http://www.vondera.app">www.vondera.app</a> <span data-il8n="privacy2">By accessing the
+                            App and
+                            using our services, you acknowledge and agree to the practices described in this
+                            policy.</span>
                     </p>
 
-                    <p><strong>b) Personalization:</strong></p>
-                    <p>We may use your information to tailor your experience by providing relevant content,
-                        recommendations, and features that align with your business needs.</p>
-
-                    <p><strong>c) Communication:</strong></p>
-                    <p>We may use your contact information to send you updates, newsletters, and promotional materials
-                        related to our services. You can opt out of receiving promotional emails at any time.</p>
-
-                    <p><strong>d) Legal Compliance:</strong></p>
-                    <p>We may use and disclose your information when required by law, legal process, or to protect our
-                        rights, privacy, safety, or property.</p>
-
-                    <h2>3. Data Security</h2>
-                    <p>We prioritize the security of your information. We implement appropriate technical and
-                        organizational measures to prevent unauthorized access, disclosure, alteration, or destruction
-                        of your data.</p>
-
-                    <h2>4. Your Choices</h2>
-                    <p>You can review, update, or delete your account information within the App's settings. You can
-                        also choose not to provide certain information, though this may limit your access to certain
-                        features.</p>
-
-                    <h2>5. Terms & Conditions</h2>
-                    <p>Please review our <a href="http://www.vondera.app/terms">Terms & Conditions</a> available on our
-                        Website for a comprehensive understanding of your rights and responsibilities when using our App
-                        and Website.</p>
-
-                    <h2>6. Contact Us</h2>
-                    <p>If you have any questions, concerns, or requests regarding this Privacy Policy or our data
-                        practices, please contact us at <a href="mailto:vondera.eg@gmail.com">vondera.eg@gmail.com</a>.
+                    <h2><span data-il8n="informationWeCollect">1. Information We Collect</span></h2>
+                    <p><strong><span data-il8n="personalInformation">a) Personal Information:</span></strong></p>
+                    <p><span data-il8n="collectPersonalInfo">We may collect personal information from you, such as your
+                            name, email address, and contact
+                            details, when you register for an account, subscribe to our services, or contact us for
+                            support.
+                            This information is essential for providing a personalized and effective experience.</span>
                     </p>
+
+                    <p><strong><span data-il8n="usageInformation">b) Usage Information:</span></strong></p>
+                    <p><span data-il8n="enhanceServices">To enhance our services, we gather data on how you interact
+                            with the App and Website. This
+                            includes tracking your actions, preferences, and transactions within the platform.</span>
+                    </p>
+
+                    <p><strong><span data-il8n="deviceInformation">c) Device Information:</span></strong></p>
+                    <p><span data-il8n="collectDeviceInfo">We may collect information about your device, such as device
+                            type, operating system, browser
+                            type, and unique device identifiers. This data helps us optimize our services for various
+                            devices and platforms.</span></p>
+
+                    <h2><span data-il8n="howWeUseInfo">2. How We Use Your Information</span></h2>
+                    <p><strong><span data-il8n="providingServices">a) Providing Services:</span></strong></p>
+                    <p><span data-il8n="deliverServices">We utilize your information to deliver the services you've
+                            requested. This includes managing your
+                            inventory, tracking sales, generating reports, and facilitating communication within your
+                            team.</span></p>
+
+                    <p><strong><span data-il8n="personalization">b) Personalization:</span></strong></p>
+                    <p><span data-il8n="tailorExperience">We may use your information to tailor your experience by
+                            providing relevant content,
+                            recommendations, and features that align with your business needs.</span></p>
+
+                    <p><strong><span data-il8n="communication">c) Communication:</span></strong></p>
+                    <p><span data-il8n="sendUpdates">We may use your contact information to send you updates,
+                            newsletters, and promotional materials
+                            related to our services. You can opt out of receiving promotional emails at any time.</span>
+                    </p>
+
+                    <p><strong><span data-il8n="legalCompliance">d) Legal Compliance:</span></strong></p>
+                    <p><span data-il8n="useAndDiscloseInfo">We may use and disclose your information when required by
+                            law, legal process, or to protect our
+                            rights, privacy, safety, or property.</span></p>
+
+                    <h2><span data-il8n="dataSecurity">3. Data Security</span></h2>
+                    <p><span data-il8n="securityPriority">We prioritize the security of your information. We implement
+                            appropriate technical and
+                            organizational measures to prevent unauthorized access, disclosure, alteration, or
+                            destruction
+                            of your data.</span></p>
+
+                    <h2><span data-il8n="yourChoices">4. Your Choices</span></h2>
+                    <p><span data-il8n="reviewUpdateDelete">You can review, update, or delete your account information
+                            within the App's settings. You can
+                            also choose not to provide certain information, though this may limit your access to certain
+                            features.</span></p>
+
+                    <h2><span data-il8n="termsConditions">5. Terms & Conditions</span></h2>
+                    <p><span data-il8n="reviewTermsConditions">Please review our <a href="http://www.vondera.app/terms"
+                                data-il8n="termsConditionsLink">Terms & Conditions</a> available on our
+                            Website for a comprehensive understanding of your rights and responsibilities when using our
+                            App
+                            and Website.</span></p>
+
+                    <h2><span data-il8n="contactUs">6. Contact Us</span></h2>
+                    <p><span data-il8n="questionsConcernsRequests">If you have any questions, concerns, or requests
+                            regarding this Privacy Policy or our data
+                            practices, please contact us at <a href="mailto:vondera.eg@gmail.com"
+                                data-il8n="contactEmail">vondera.eg@gmail.com</a>.
+                        </span></p>
                 </div>
             </div>
         </div>
@@ -143,16 +172,18 @@
                 <div class="row">
                     <div class="col-12 col-md-6 col-lg-3">
                         <div class="kilimanjaro_part">
-                            <h5>About Us</h5>
-                            <p>Vondera is a comprehensive mobile app available on App Store and Play Store, designed to
+                            <h5 data-il8n="about">About Us</h5>
+                            <p data-il8n="footer_about"> Vondera is a comprehensive mobile app available on App Store
+                                and Play Store, designed to
                                 streamline e-commerce store management.</p>
-                            <p> It empowers store owners with features like stock tracking, order receipt printing, and
+                            <p data-il8n="footer_about2"> It empowers store owners with features like stock tracking,
+                                order receipt printing, and
                                 sales analytics. With collaborative tools, order and shipping updates, and expense
                                 tracking, Vondera simplifies operations and facilitates accurate net profit
                                 calculations.</p>
                         </div>
                         <div class="kilimanjaro_part m-top-15">
-                            <h5>Social Links</h5>
+                            <h5 data-il8n="soical">Social Links</h5>
                             <ul class="kilimanjaro_social_links">
                                 <li><a href="https://www.facebook.com/vondera.eg" target="_blank"><i
                                             class="fa-brands fa-facebook fa-fade color1"></i> Facebook</a>
@@ -177,38 +208,40 @@
                     </div>
                     <div class="col-12 col-md-6 col-lg-3">
                         <div class="kilimanjaro_part m-top-15">
-                            <h5>Important Links</h5>
+                            <h5 data-il8n="important_links">Important Links</h5>
                             <ul class="kilimanjaro_links">
-                                <li><a href="index.html#home">Home</a></li>
-                                <li><a href="index.html#about">About</a></li>
-                                <li><a href="index.html#pricing">Pricing</a></li>
-                                <li><a href="index.html#contact">Contact us</a></li>
-                                <li><a href="policy.html">Privacy Policy</a></li>
-                                <li><a href="terms.html">Terms & conditions</a></li>
+                                <li><a href="index.html#home" data-il8n="home">Home</a></li>
+                                <li><a href="index.html#about" data-il8n="about">About</a></li>
+                                <li><a href="index.html#pricing" data-il8n="pricing">Pricing</a></li>
+                                <li><a href="index.html#contact" data-il8n="contact">Contact us</a></li>
+                                <li><a href="policy.html" data-il8n="privacy">Privacy Policy</a></li>
+                                <li><a href="terms.html" data-il8n="terms">Terms & conditions</a></li>
                             </ul>
                         </div>
                     </div>
                     <div class="col-12 col-md-6 col-lg-3">
                         <div class="kilimanjaro_part">
-                            <h5>Download The App</h5>
+                            <h5 data-il8n="app_download">Download The App</h5>
                             <div class="footer_button">
-                                <button><i class="fa-brands fa-apple fa-fade pad-right"></i>App Store</button>
+                                <button><i class="fa-brands fa-apple fa-fade pad-right"></i> <span
+                                        data-il8n="app_Store">App Store</span> </button>
                                 <button
                                     onclick="openLinkInNewWindowplaystore(' https://play.google.com/store/apps/details?id=com.armjld.brands ')"><i
-                                        class="fa-brands fa-google-play fa-fade pad-right"></i>Google Play</button>
+                                        class="fa-brands fa-google-play fa-fade pad-right"></i> <span
+                                        data-il8n="google_play"> Google Play</span> </button>
                             </div>
 
                         </div>
                     </div>
                     <div class="col-12 col-md-6 col-lg-3">
                         <div class="kilimanjaro_part">
-                            <h5>Quick Contact</h5>
+                            <h5 data-il8n="contact">Quick Contact</h5>
                             <div class="kilimanjaro_single_contact_info">
-                                <h5>Phone:</h5>
-                                <p><a>+20 1551542540</a></p>
+                                <h5 data-il8n="phone">Phone:</h5>
+                                <p><a>01551542540</a></p>
                             </div>
                             <div class="kilimanjaro_single_contact_info">
-                                <h5>Email:</h5>
+                                <h5 data-il8n="email">Email:</h5>
                                 <p><a href="#">info@vondera.app</a></p>
                             </div>
                         </div>
@@ -237,6 +270,7 @@
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script src="js/script.js" type="module"></script>
     <script src="js/navbar.js" type="module"></script>
+    <script src="js/translationpolicy.js" type="module"></script>
     <script>
         // Add event listener to the button
         document.getElementById("getLink").addEventListener("click", function () {
